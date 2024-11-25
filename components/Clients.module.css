@@ -1,0 +1,24 @@
+.clients {
+  padding: 0;
+}
+
+.clients .swiper {
+  padding: 20px 0;
+}
+
+.clients .swiper-slide img {
+  opacity: 0.5;
+  transition: 0.3s;
+  max-width: 100%;
+  height: auto;
+}
+
+.clients .swiper-slide img:hover {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .clients .swiper-slide img {
+    max-width: 90%;
+  }
+}
