@@ -37,42 +37,37 @@ function MyApp({ Component, pageProps }: AppProps) {
       if (typeof window !== 'undefined') {
         const { Swiper } = await import('swiper')
         const swiperElements = document.querySelectorAll('.init-swiper')
-        swiperElements.forEach(element => {
-          new Swiper(element, {
-            loop: true,
-            speed: 600,
-            autoplay: {
-              delay: 5000
-            },
-            slidesPerView: 'auto',
-            pagination: {
-              el: '.swiper-pagination',
-              type: 'bullets',
-              clickable: true
-            },
-            breakpoints: {
-              320: {
-                slidesPerView: 2,
-                spaceBetween: 40
+        swiperElements.forEach((element) => {
+          if (element instanceof HTMLElement) {
+            new Swiper(element, {
+              loop: true,
+              speed: 600,
+              autoplay: {
+                delay: 5000,
+                disableOnInteraction: false
               },
-              480: {
-                slidesPerView: 3,
-                spaceBetween: 60
+              slidesPerView: 'auto',
+              pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+                clickable: true
               },
-              640: {
-                slidesPerView: 4,
-                spaceBetween: 80
-              },
-              992: {
-                slidesPerView: 5,
-                spaceBetween: 120
-              },
-              1200: {
-                slidesPerView: 6,
-                spaceBetween: 140
+              breakpoints: {
+                320: {
+                  slidesPerView: 1,
+                  spaceBetween: 20
+                },
+                768: {
+                  slidesPerView: 2,
+                  spaceBetween: 20
+                },
+                1200: {
+                  slidesPerView: 3,
+                  spaceBetween: 20
+                }
               }
-            }
-          })
+            })
+          }
         })
       }
     }
