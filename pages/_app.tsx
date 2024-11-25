@@ -1,5 +1,6 @@
 import type { AppProps } from 'next/app'
 import { useEffect } from 'react'
+import Head from 'next/head'
 
 // Import styles
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -79,7 +80,16 @@ function MyApp({ Component, pageProps }: AppProps) {
     initializeLibraries()
   }, [])
 
-  return <Component {...pageProps} />
+  return (
+    <>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+      </Head>
+      <Component {...pageProps} />
+    </>
+  )
 }
 
 export default MyApp

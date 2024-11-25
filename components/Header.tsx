@@ -27,11 +27,11 @@ const Header: React.FC = () => {
 
         <nav id="navmenu" className="navmenu">
           <ul>
-            <li><Link href="#hero" className="active">Home</Link></li>
-            <li><Link href="#about">About</Link></li>
-            <li><Link href="#services">Services</Link></li>
-            <li><Link href="#pricing">Pricing</Link></li>
-            <li><Link href="#contact">Contact</Link></li>
+            <li><Link href="#hero"><a className="active">Home</a></Link></li>
+            <li><Link href="#about"><a>About</a></Link></li>
+            <li><Link href="#services"><a>Services</a></Link></li>
+            <li><Link href="#pricing"><a>Pricing</a></Link></li>
+            <li><Link href="#contact"><a>Contact</a></Link></li>
           </ul>
           <i className="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
