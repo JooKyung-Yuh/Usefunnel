@@ -7,9 +7,9 @@
 /* Fonts */
 
 :root {
-    --default-font: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --heading-font: "Jost", sans-serif;
-    --nav-font: "Poppins", sans-serif;
+    --default-font: 'Open Sans', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --heading-font: 'Jost', sans-serif;
+    --nav-font: 'Poppins', sans-serif;
 }
 
 
@@ -136,7 +136,7 @@ h6 {
 }
 
 .php-email-form .loading:before {
-    content: "";
+    content: '';
     display: inline-block;
     border-radius: 50%;
     width: 24px;
@@ -300,7 +300,7 @@ h6 {
     margin-bottom: 15px;
     padding: 6px 8px;
     position: relative;
-    background-color: color-mix(in srgb, var(--background-color), transparent 50%);
+    background-color: color-mix( in srgb, var(--background-color), transparent 50%);
     border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
     box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -312,19 +312,19 @@ h6 {
     border-color: var(--accent-color);
 }
 
-.footer .footer-newsletter .newsletter-form input[type=email] {
+.footer .footer-newsletter .newsletter-form input[type='email'] {
     border: 0;
     padding: 4px;
     width: 100%;
-    background-color: color-mix(in srgb, var(--background-color), transparent 50%);
+    background-color: color-mix( in srgb, var(--background-color), transparent 50%);
     color: var(--default-color);
 }
 
-.footer .footer-newsletter .newsletter-form input[type=email]:focus-visible {
+.footer .footer-newsletter .newsletter-form input[type='email']:focus-visible {
     outline: none;
 }
 
-.footer .footer-newsletter .newsletter-form input[type=submit] {
+.footer .footer-newsletter .newsletter-form input[type='submit'] {
     border: 0;
     font-size: 16px;
     padding: 0 20px;
@@ -335,7 +335,7 @@ h6 {
     border-radius: 50px;
 }
 
-.footer .footer-newsletter .newsletter-form input[type=submit]:hover {
+.footer .footer-newsletter .newsletter-form input[type='submit']:hover {
     background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
 
@@ -448,7 +448,7 @@ h6 {
 }
 
 #preloader:before {
-    content: "";
+    content: '';
     position: fixed;
     top: calc(50% - 30px);
     left: calc(50% - 30px);
@@ -549,7 +549,7 @@ h6 {
 }
 
 .page-title .breadcrumbs ol li+li::before {
-    content: "/";
+    content: '/';
     display: inline-block;
     padding-right: 10px;
     color: color-mix(in srgb, var(--default-color), transparent 70%);
@@ -597,7 +597,7 @@ section,
 }
 
 .section-title h2:before {
-    content: "";
+    content: '';
     position: absolute;
     display: block;
     width: 160px;
@@ -610,7 +610,7 @@ section,
 }
 
 .section-title h2::after {
-    content: "";
+    content: '';
     position: absolute;
     display: block;
     width: 60px;
@@ -746,10 +746,18 @@ section,
 .clients .swiper-slide img {
     transition: 0.3s;
     padding: 0 10px;
+    opacity: 0.5;
 }
 
 .clients .swiper-slide img:hover {
     transform: scale(1.1);
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .clients .swiper-slide img {
+        max-width: 90%;
+    }
 }
 
 
@@ -828,7 +836,7 @@ section,
 }
 
 .call-to-action:before {
-    content: "";
+    content: '';
     background: color-mix(in srgb, var(--background-color), transparent 50%);
     position: absolute;
     inset: 0;
@@ -1129,31 +1137,31 @@ section,
     }
 }
 
-.contact .php-email-form input[type=text],
-.contact .php-email-form input[type=email],
+.contact .php-email-form input[type='text'],
+.contact .php-email-form input[type='email'],
 .contact .php-email-form textarea {
     font-size: 14px;
     padding: 10px 15px;
     box-shadow: none;
     border-radius: 0;
     color: var(--default-color);
-    background-color: color-mix(in srgb, var(--background-color), transparent 50%);
+    background-color: color-mix( in srgb, var(--background-color), transparent 50%);
     border-color: color-mix(in srgb, var(--default-color), transparent 80%);
 }
 
-.contact .php-email-form input[type=text]:focus,
-.contact .php-email-form input[type=email]:focus,
+.contact .php-email-form input[type='text']:focus,
+.contact .php-email-form input[type='email']:focus,
 .contact .php-email-form textarea:focus {
     border-color: var(--accent-color);
 }
 
-.contact .php-email-form input[type=text]::placeholder,
-.contact .php-email-form input[type=email]::placeholder,
+.contact .php-email-form input[type='text']::placeholder,
+.contact .php-email-form input[type='email']::placeholder,
 .contact .php-email-form textarea::placeholder {
     color: color-mix(in srgb, var(--default-color), transparent 70%);
 }
 
-.contact .php-email-form button[type=submit] {
+.contact .php-email-form button[type='submit'] {
     color: var(--contrast-color);
     background: var(--accent-color);
     border: 0;
@@ -1162,7 +1170,7 @@ section,
     border-radius: 50px;
 }
 
-.contact .php-email-form button[type=submit]:hover {
+.contact .php-email-form button[type='submit']:hover {
     background: color-mix(in srgb, var(--accent-color), transparent 25%);
 }
 
