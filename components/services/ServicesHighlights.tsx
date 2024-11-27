@@ -1,13 +1,20 @@
-import React from 'react';
-import styles from '../styles/Hero2.module.css';
+import React from 'react'
+import styles from '../../styles/components/services/ServicesHighlights.module.css'
 
-const Hero2 = () => {
+const ServicesHighlights = () => {
   return (
-    <section id="hero-2" className={styles.hero2}>
-      <img src="/assets/img/hero-background_1.jpg" alt="" className={styles.bgImage} />
+    <section id="services" className={styles.hero2}>
+      <img
+        src="/assets/img/hero-background_1.jpg"
+        alt=""
+        className={styles.bgImage}
+      />
       <div className={styles.overlay}></div>
-      
-      <div className={`container text-center ${styles.content}`} data-aos="fade-up">
+
+      <div
+        className={`container text-center ${styles.content}`}
+        data-aos="fade-up"
+      >
         <div className="row justify-content-center">
           <div className="col-lg-8">
             <h2>영상에 병원의 진심을 담다</h2>
@@ -21,7 +28,7 @@ const Hero2 = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Hero2;
+export default ServicesHighlights

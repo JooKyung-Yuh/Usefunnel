@@ -1,40 +1,40 @@
 import Head from 'next/head'
-import Header from '../components/Header'
-import Hero from '../components/Hero'
-import Clients from '../components/Clients'
-import About from '../components/About'
-import CallToAction from '../components/CallToAction'
-import Services from '../components/Services'
-import Services2 from '../components/Services2'
-import Hero2 from '../components/Hero2'
-import Pricing from '../components/Pricing'
-import Contact from '../components/Contact'
-import Footer from '../components/Footer'
-import Hero3 from '../components/Hero3'
+import Header from '../components/layout/Header'
+import Hero from '../components/home/Hero'
+import Clients from '../components/home/Clients'
+import About from '../components/home/About'
+import CallToAction from '../components/home/CallToAction'
+import Pricing from '../components/common/Pricing'
+import Contact from '../components/home/Contact'
+import Footer from '../components/layout/Footer'
+import Services from '../components/services/Services'
 
 export default function Home() {
   return (
     <div className="index-page">
       <Head>
-        <title>Index - Usefunnel</title>
-        <meta name="description" content="UseFunnel helps businesses optimize their sales funnel and increase conversions through data-driven insights and advanced analytics." />
-        <meta name="keywords" content="" />
+        <title>UseFunnel - AI 기반 마케팅 자동화 솔루션</title>
+        <meta name="description" content="AI 기반 마케팅 자동화 솔루션" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Header />
-      <main className="main">
+
+      <main id="main">
         <Hero />
         <Clients />
         <About />
         <CallToAction />
+        {/* <ServicesOverview />
+        <ServicesHighlights />
+        <ServicesFeatures />
+        <ServicesAdvantages />
+        <ServicesBenefits /> */}
         <Services />
-        <Services2 />
-        <Hero2 />
-        <Hero3 />
         <Pricing />
         <Contact />
       </main>
+
       <Footer />
     </div>
   )
