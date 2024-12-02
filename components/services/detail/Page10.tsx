@@ -7,11 +7,12 @@ const Page10 = () => {
     <section className={styles.section}>
       <div className={styles.backgroundImage}>
         <Image
-          src="/assets/img/services_details/TalkFile_feedx_상품소개서_ver2.jpg"
+          src="/assets/img/services_details/feedx_product_intro_v2.jpg"
           alt="Background"
           layout="fill"
           objectFit="cover"
           quality={100}
+          priority
         />
         <div className={styles.overlay}></div>
       </div>
