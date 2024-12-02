@@ -14,10 +14,13 @@ const Page8 = () => {
             className={`${styles.backgroundText} ${
               index === 5 ? styles.highlightText : ''
             }`}
-            style={{
-              transform: `translateY(${(index - 5) * 100}px)`,
-              opacity: Math.max(0.2, 1 - Math.abs(index - 5) * 0.2),
-            }}
+            style={
+              {
+                transform: `translateY(${(index - 5) * 100}px)`,
+                opacity: Math.max(0.2, 1 - Math.abs(index - 5) * 0.2),
+                '--index': index,
+              } as React.CSSProperties
+            }
           >
             {text}
           </div>

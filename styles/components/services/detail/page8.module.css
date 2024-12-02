@@ -22,7 +22,7 @@
 .backgroundText {
   position: absolute;
   width: 100%;
-  font-size: 9rem;
+  font-size: clamp(2rem, 8vw, 9rem);
   font-weight: bold;
   white-space: nowrap;
   transition: transform 0.5s ease-out;
@@ -34,33 +34,36 @@
   color: #f5584a;
   text-shadow: 0 0 30px rgba(234, 83, 55, 0.4);
   z-index: 2;
-  font-size: 9.5rem;
+  font-size: clamp(2.5rem, 8.5vw, 9.5rem);
   -webkit-text-stroke: 0;
+}
+
+@media (max-width: 1200px) {
+  .backgroundText {
+    transform: translateY(calc((var(--index) - 5) * 80px)) !important;
+  }
 }
 
 @media (max-width: 991px) {
   .backgroundText {
-    font-size: 6rem;
-  }
-  .highlightText {
-    font-size: 6.5rem;
+    transform: translateY(calc((var(--index) - 5) * 60px)) !important;
   }
 }
 
 @media (max-width: 767px) {
   .backgroundText {
-    font-size: 5rem;
+    transform: translateY(calc((var(--index) - 5) * 40px)) !important;
   }
-  .highlightText {
-    font-size: 5.5rem;
+  .section {
+    padding: 80px 0;
   }
 }
 
 @media (max-width: 480px) {
   .backgroundText {
-    font-size: 3.5rem;
+    transform: translateY(calc((var(--index) - 5) * 30px)) !important;
   }
-  .highlightText {
-    font-size: 4rem;
+  .section {
+    padding: 60px 0;
   }
 }
