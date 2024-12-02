@@ -15,6 +15,7 @@ const Services: React.FC = () => {
       <ServicesOverview />
       <ServicesHighlights />
       <ServicesFeatures />
+      {/* <ServicesAdvantages /> */}
       <ServicesBenefits />
       {/* <ServicesCTA /> */}
 

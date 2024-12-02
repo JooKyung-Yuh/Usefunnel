@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '../../styles/components/services/ServicesAdvantages.module.css'
+import styles from '../../styles/ServicesAdvantages.module.css'
 
 const ServicesAdvantages = () => {
   return (

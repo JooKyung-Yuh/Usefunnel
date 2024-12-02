@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'
 
 const CallToAction: React.FC = () => {
   return (
-    <section id="call-to-action" className="call-to-action section dark-background">
+    <section id="about" className="call-to-action section dark-background">
       <img src="/assets/img/cta-bg.jpg" alt="" />
 
       <div className="container">
@@ -12,12 +12,14 @@ const CallToAction: React.FC = () => {
             <p>NEW LEAP, GLOBAL</p>
           </div>
           <div className="col-xl-3 cta-btn-container text-center">
-            <a className="cta-btn align-middle" href="#">Call To Action</a>
+            <a className="cta-btn align-middle" href="#">
+              Call To Action
+            </a>
           </div>
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default CallToAction;
+export default CallToAction

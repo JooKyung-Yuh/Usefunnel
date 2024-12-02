@@ -1,0 +1,179 @@
+.strategy {
+  background-color: #000;
+  padding: 120px 0 80px 0;
+  color: #fff;
+}
+
+.sectionTitle {
+  text-align: left;
+  margin-bottom: 4rem;
+  padding-left: 2rem;
+}
+
+.sectionTitle h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+}
+
+.sectionTitle p {
+  font-size: 1.2rem;
+  color: #d3d3d3;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.gridItem {
+  background-color: #101010;
+  border-radius: 8px;
+  padding: 2rem;
+  height: 100%;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.gridItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.number {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: #333;
+  font-size: 3rem;
+  font-weight: bold;
+  opacity: 0.3;
+}
+
+.content {
+  color: white;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 991px) {
+  .sectionTitle h2 {
+    font-size: 2rem;
+  }
+  .sectionTitle p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .sectionTitle h2 {
+    font-size: 1.75rem;
+  }
+  .gridItem {
+    padding: 1.5rem;
+  }
+}
+
+.bottomText {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.bottomText p {
+  font-size: 1.2rem;
+  color: #d3d3d3;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.tableContainer {
+  margin: 2rem 0;
+  overflow-x: auto;
+}
+
+.comparisonTable {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #101010;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.comparisonTable th,
+.comparisonTable td {
+  padding: 1.5rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.comparisonTable th {
+  background: #1a1a1a;
+  font-weight: bold;
+  color: #ea5337;
+  font-size: 1.1rem;
+}
+
+.comparisonTable td {
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.comparisonTable tr:last-child td {
+  border-bottom: none;
+}
+
+.comparisonTable tr:hover td {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+@media (max-width: 768px) {
+  .comparisonTable th,
+  .comparisonTable td {
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+.comparisonTable tr.highlight td {
+  animation: highlightRow 0.5s forwards;
+  animation-delay: 2s;
+  /* 모든 fade 애니메이션이 끝난 후 시작 */
+}
+
+@keyframes highlightRow {
+  0% {
+    transform: scale(1);
+    background: rgba(255, 255, 255, 0.05);
+  }
+  50% {
+    transform: scale(1.05);
+    background: rgba(234, 83, 55, 0.15);
+    /* #ea5337 with opacity */
+  }
+  100% {
+    transform: scale(1.02);
+    background: rgba(234, 83, 55, 0.1);
+  }
+}
+
+/* 모바일에서는 스케일 효과를 줄임 */
+
+@media (max-width: 768px) {
+  @keyframes highlightRow {
+    0% {
+      transform: scale(1);
+      background: rgba(255, 255, 255, 0.05);
+    }
+    50% {
+      transform: scale(1.02);
+      background: rgba(234, 83, 55, 0.15);
+    }
+    100% {
+      transform: scale(1.01);
+      background: rgba(234, 83, 55, 0.1);
+    }
+  }
+}

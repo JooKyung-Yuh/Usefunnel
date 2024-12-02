@@ -3,7 +3,7 @@ import styles from '../../styles/components/services/ServicesCTA.module.css'
 
 const ServicesCTA = () => {
   return (
-    <section className={styles.section}>
+    <section id="services" className={styles.section}>
       <div className="container">
         <div className="row align-items-center">
           <div className="col-lg-6">

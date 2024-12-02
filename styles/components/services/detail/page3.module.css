@@ -1,0 +1,335 @@
+.cards {
+  position: relative;
+  background-color: #000;
+  padding: 80px 0;
+  padding-bottom: 0;
+  color: #fff;
+}
+
+.cards .card-item {
+  background: color-mix(in srgb, var(--default-color), transparent 97%);
+  padding: 50px 30px;
+  transition: all ease-in-out 0.3s;
+  height: 100%;
+  position: relative;
+}
+
+.cards .card-item span {
+  color: var(--accent-color);
+  display: block;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.cards .card-item h4 {
+  font-size: 24px;
+  font-weight: 600;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.cards .card-item h4 a {
+  color: var(--heading-color);
+}
+
+.cards .card-item p {
+  font-size: 15px;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  margin: 0;
+  padding: 0;
+}
+
+.cards .card-item:hover {
+  background: var(--accent-color);
+  padding: 30px 30px 70px 30px;
+}
+
+.cards .card-item:hover span,
+.cards .card-item:hover h4 a,
+.cards .card-item:hover p {
+  color: var(--contrast-color);
+}
+
+.cardItem {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  position: relative;
+  overflow: visible;
+  height: 100%;
+}
+
+.cardItem::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 15%;
+  height: 70%;
+  width: 2px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.cardItem:last-child::after {
+  display: none;
+}
+
+.cardLabel {
+  color: white;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.statsHeading {
+  margin: 1rem 0;
+}
+
+.statsLink {
+  text-decoration: none;
+}
+
+.numberValue {
+  color: #ea5337;
+  font-size: 8rem;
+  font-weight: bold;
+}
+
+.unit {
+  color: #d3d3d3;
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+.cardDescription {
+  color: white;
+  font-size: 2rem;
+  text-decoration: underline;
+  margin-top: 1rem;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: white;
+  margin: 4rem 0;
+}
+
+.sectionTitle {
+  text-align: left;
+  color: white;
+  margin: 3rem 0;
+  padding-left: 2rem;
+}
+
+.sectionTitle h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+/* 태블릿 크기 */
+
+@media (max-width: 991px) {
+  .numberValue {
+    font-size: 6rem;
+  }
+  .unit {
+    font-size: 4rem;
+  }
+  .cardDescription {
+    font-size: 2rem;
+  }
+  .cardItem {
+    padding-bottom: 2rem;
+  }
+  .cardItem::after {
+    right: 10%;
+    top: auto;
+    bottom: 0;
+    width: 80%;
+    height: 1px;
+  }
+  .sectionTitle h2 {
+    font-size: 2rem;
+  }
+}
+
+/* 모바일 크기 */
+
+@media (max-width: 767px) {
+  .numberValue {
+    font-size: 4rem;
+  }
+  .unit {
+    font-size: 2.5rem;
+  }
+  .cardDescription {
+    font-size: 1.75rem;
+  }
+  .sectionTitle h2 {
+    font-size: 1.5rem;
+  }
+  .sectionTitle {
+    padding-left: 1rem;
+  }
+  .divider {
+    margin: 3rem 0;
+  }
+}
+
+/* 작은 모바일 크기 */
+
+@media (max-width: 480px) {
+  .numberValue {
+    font-size: 3rem;
+  }
+  .unit {
+    font-size: 2rem;
+  }
+  .cardDescription {
+    font-size: 1rem;
+  }
+  .sectionTitle h2 {
+    font-size: 1.25rem;
+  }
+  .sectionTitle {
+    padding-left: 0.5rem;
+  }
+  .divider {
+    margin: 2rem 0;
+  }
+}
+
+.darkCard {
+  background-color: #101010;
+  border-radius: 8px;
+  height: 100%;
+  position: relative;
+  border: none;
+  opacity: 0;
+  animation: fadeInCard 0.5s forwards;
+}
+
+.darkCard::after {
+  display: none;
+}
+
+.darkCard .cardLabel {
+  color: #ea5337;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.newCardDescription {
+  color: white;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin-top: 1rem;
+  text-align: left;
+}
+
+@media (max-width: 991px) {
+  .darkCard .cardLabel {
+    font-size: 1.75rem;
+  }
+  .newCardDescription {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .darkCard .cardLabel {
+    font-size: 1.5rem;
+  }
+  .newCardDescription {
+    font-size: 1rem;
+  }
+}
+
+.arrowContainer {
+  position: absolute;
+  right: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  opacity: 0;
+  animation: slideInArrow 0.5s forwards;
+}
+
+.arrow {
+  width: 40px;
+  height: 40px;
+  background-color: #929292;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+}
+
+@keyframes fadeInCard {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInArrow {
+  from {
+    opacity: 0;
+    transform: translate(-20px, -50%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, -50%);
+  }
+}
+
+/* 애니메이션 딜레이 설정 */
+
+[data-aos-delay='100'] .darkCard {
+  animation-delay: 0.1s;
+}
+
+[data-aos-delay='200'] .darkCard {
+  animation-delay: 0.3s;
+}
+
+[data-aos-delay='300'] .darkCard {
+  animation-delay: 0.5s;
+}
+
+[data-aos-delay='100'] .arrowContainer {
+  animation-delay: 0.6s;
+}
+
+[data-aos-delay='200'] .arrowContainer {
+  animation-delay: 0.8s;
+}
+
+@media (max-width: 991px) {
+  .arrowContainer {
+    right: 50%;
+    top: auto;
+    bottom: -30px;
+    transform: translateX(50%) rotate(90deg);
+  }
+  @keyframes slideInArrow {
+    from {
+      opacity: 0;
+      transform: translate(50%, -20px) rotate(90deg);
+    }
+    to {
+      opacity: 1;
+      transform: translate(50%, 0) rotate(90deg);
+    }
+  }
+}
