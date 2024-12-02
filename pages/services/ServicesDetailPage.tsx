@@ -17,7 +17,6 @@ const ServicesDetailPage = () => {
     <>
       <Header />
       <main id="main">
-        <ServicesHero />
         <Page3 />
         <Page4 />
         <Page5 />
