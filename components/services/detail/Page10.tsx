@@ -1,18 +1,19 @@
 import React from 'react'
-import Image from 'next/image'
 import styles from '../../../styles/components/services/detail/page10.module.css'
 
 const Page10 = () => {
   return (
     <section className={styles.section}>
       <div className={styles.backgroundImage}>
-        <Image
+        <img
           src="/assets/img/services_details/feedx_product_intro_v2.jpg"
           alt="Background"
-          layout="fill"
-          objectFit="cover"
-          quality={100}
-          priority
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            position: 'absolute',
+          }}
         />
         <div className={styles.overlay}></div>
       </div>
