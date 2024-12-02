@@ -1,8 +1,16 @@
 import React from 'react'
 import styles from '../../../styles/components/services/detail/page4.module.css'
 
+interface TableRow {
+  platform: string
+  growth: string
+  response: string
+  longTerm: string
+  [key: string]: string
+}
+
 const Page4 = () => {
-  const tableData = [
+  const tableData: TableRow[] = [
     {
       platform: '플랫폼',
       growth: '조회수 증가 속도',
