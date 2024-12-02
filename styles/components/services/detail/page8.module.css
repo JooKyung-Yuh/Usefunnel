@@ -1,0 +1,66 @@
+.section {
+  background-color: #000;
+  padding: 120px 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.backgroundTexts {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  perspective: 1000px;
+}
+
+.backgroundText {
+  position: absolute;
+  width: 100%;
+  font-size: 9rem;
+  font-weight: bold;
+  white-space: nowrap;
+  transition: transform 0.5s ease-out;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+}
+
+.highlightText {
+  color: #f5584a;
+  text-shadow: 0 0 30px rgba(234, 83, 55, 0.4);
+  z-index: 2;
+  font-size: 9.5rem;
+  -webkit-text-stroke: 0;
+}
+
+@media (max-width: 991px) {
+  .backgroundText {
+    font-size: 6rem;
+  }
+  .highlightText {
+    font-size: 6.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .backgroundText {
+    font-size: 5rem;
+  }
+  .highlightText {
+    font-size: 5.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .backgroundText {
+    font-size: 3.5rem;
+  }
+  .highlightText {
+    font-size: 4rem;
+  }
+}

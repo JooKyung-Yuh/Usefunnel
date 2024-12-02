@@ -1,0 +1,70 @@
+.strategy {
+  background-color: #000;
+  padding: 120px 0 80px 0;
+  color: #fff;
+}
+
+.sectionTitle {
+  text-align: left;
+  margin-bottom: 4rem;
+  padding-left: 2rem;
+}
+
+.sectionTitle h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.highlight {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ea5337;
+  margin-bottom: 2rem;
+}
+
+.strategyList {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.strategyItem {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.bottomText {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.bottomText p {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  max-width: 1200px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+@media (max-width: 991px) {
+  .sectionTitle h2,
+  .highlight,
+  .strategyItem,
+  .bottomText p {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .sectionTitle h2,
+  .highlight,
+  .strategyItem,
+  .bottomText p {
+    font-size: 1.5rem;
+  }
+}

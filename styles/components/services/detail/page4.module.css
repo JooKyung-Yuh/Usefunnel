@@ -57,20 +57,16 @@
 }
 
 @media (max-width: 991px) {
-  .sectionTitle h2 {
-    font-size: 2rem;
-  }
-  .sectionTitle p {
-    font-size: 1rem;
+  .sectionTitle h2,
+  .bottomText p {
+    font-size: 1.75rem;
   }
 }
 
 @media (max-width: 767px) {
-  .sectionTitle h2 {
-    font-size: 1.75rem;
-  }
-  .gridItem {
-    padding: 1.5rem;
+  .sectionTitle h2,
+  .bottomText p {
+    font-size: 1.5rem;
   }
 }
 
@@ -80,9 +76,10 @@
 }
 
 .bottomText p {
-  font-size: 1.2rem;
-  color: #d3d3d3;
-  max-width: 800px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  max-width: 1200px;
   margin: 0 auto;
   line-height: 1.6;
 }
@@ -94,18 +91,19 @@
 
 .comparisonTable {
   width: 100%;
-  border-collapse: separate;
-  border-spacing: 0;
+  border-collapse: collapse;
   background: #101010;
   border-radius: 8px;
   overflow: hidden;
+  table-layout: fixed;
 }
 
 .comparisonTable th,
 .comparisonTable td {
   padding: 1.5rem;
   text-align: left;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 25%;
 }
 
 .comparisonTable th {
@@ -121,12 +119,19 @@
   line-height: 1.6;
 }
 
-.comparisonTable tr:last-child td {
-  border-bottom: none;
+.comparisonTable tr.highlight {
+  position: relative;
+  outline: 3px solid #ea5337;
 }
 
-.comparisonTable tr:hover td {
-  background: rgba(255, 255, 255, 0.05);
+.comparisonTable tr.highlight td {
+  background-color: #6e6e6e;
+}
+
+/* AOS 애니메이션 완료 후 스타일 적용 */
+
+.comparisonTable tr.highlight td[data-aos].aos-animate {
+  background-color: #6e6e6e;
 }
 
 @media (max-width: 768px) {
@@ -134,46 +139,5 @@
   .comparisonTable td {
     padding: 1rem;
     font-size: 0.9rem;
-  }
-}
-
-.comparisonTable tr.highlight td {
-  animation: highlightRow 0.5s forwards;
-  animation-delay: 2s;
-  /* 모든 fade 애니메이션이 끝난 후 시작 */
-}
-
-@keyframes highlightRow {
-  0% {
-    transform: scale(1);
-    background: rgba(255, 255, 255, 0.05);
-  }
-  50% {
-    transform: scale(1.05);
-    background: rgba(234, 83, 55, 0.15);
-    /* #ea5337 with opacity */
-  }
-  100% {
-    transform: scale(1.02);
-    background: rgba(234, 83, 55, 0.1);
-  }
-}
-
-/* 모바일에서는 스케일 효과를 줄임 */
-
-@media (max-width: 768px) {
-  @keyframes highlightRow {
-    0% {
-      transform: scale(1);
-      background: rgba(255, 255, 255, 0.05);
-    }
-    50% {
-      transform: scale(1.02);
-      background: rgba(234, 83, 55, 0.15);
-    }
-    100% {
-      transform: scale(1.01);
-      background: rgba(234, 83, 55, 0.1);
-    }
   }
 }
