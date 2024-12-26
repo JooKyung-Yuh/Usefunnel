@@ -24,21 +24,33 @@ const DynamicNavMenu = () => {
     { href: '#benefits', label: '도입 효과' },
   ]
 
+  const medicalMenu = [
+    { href: '#hero', label: '소개' },
+    { href: '#problems', label: '시장 현황' },
+    { href: '#solution', label: '솔루션' },
+    { href: '#cta', label: '상담 신청' },
+  ]
+
   useEffect(() => {
     const handleScroll = () => {
-      const sections = document.querySelectorAll('div[id]')
+      const currentMenu = getCurrentMenu()
+      const sections = currentMenu.map((item) =>
+        document.getElementById(item.href.substring(1)),
+      )
+
       const scrollPosition = window.scrollY + 100
 
       sections.forEach((section) => {
-        const sectionTop = (section as HTMLElement).offsetTop
-        const sectionHeight = (section as HTMLElement).offsetHeight
-        const sectionId = section.getAttribute('id') || ''
+        if (section) {
+          const sectionTop = section.offsetTop
+          const sectionHeight = section.clientHeight
 
-        if (
-          scrollPosition >= sectionTop &&
-          scrollPosition < sectionTop + sectionHeight
-        ) {
-          setActiveSection(sectionId)
+          if (
+            scrollPosition >= sectionTop &&
+            scrollPosition < sectionTop + sectionHeight
+          ) {
+            setActiveSection(section.id)
+          }
         }
       })
 
@@ -47,7 +59,18 @@ const DynamicNavMenu = () => {
 
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+  }, [router.pathname])
+
+  const getCurrentMenu = () => {
+    switch (router.pathname) {
+      case '/services/ServicesDetailPage':
+        return serviceDetailMenu
+      case '/medical-marketing':
+        return medicalMenu
+      default:
+        return defaultMenu
+    }
+  }
 
   const toggleMobileNav = () => {
     setIsMobileNavActive(!isMobileNavActive)
@@ -70,7 +93,7 @@ const DynamicNavMenu = () => {
       className={`${styles.navmenu} ${scrolled ? styles.sticked : ''}`}
     >
       <ul className={styles.navList}>
-        {currentMenu.map((item) => (
+        {getCurrentMenu().map((item) => (
           <li key={item.href} className={styles.navItem}>
             <a
               href={item.href}

@@ -4,7 +4,7 @@ import styles from '../../styles/components/medical/MedicalMarketing.module.css'
 const MedicalMarketingContent = () => {
   return (
     <div className={styles.medicalMarketing}>
-      <section className={styles.hero}>
+      <section id="hero" className={styles.hero}>
         <div className="container">
           <h1>해외 신규 환자를 확보하고 계십니까?</h1>
         </div>
