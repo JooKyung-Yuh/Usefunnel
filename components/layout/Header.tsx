@@ -35,8 +35,8 @@ const Header: React.FC = () => {
         <DynamicNavMenu />
 
         <li>
-          <Link href="/medical-marketing" className="nav-link">
-            의료 마케팅
+          <Link href="/medical-marketing">
+            <a className="nav-link">의료 마케팅</a>
           </Link>
         </li>
 
