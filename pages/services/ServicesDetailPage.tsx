@@ -17,11 +17,21 @@ const ServicesDetailPage = () => {
     <>
       <Header />
       <main id="main">
-        <Page3 />
-        <Page4 />
-        <Page5 />
-        <Page6 />
-        <Page7 />
+        <div id="overview">
+          <Page3 />
+        </div>
+        <div id="problem">
+          <Page4 />
+        </div>
+        <div id="solution">
+          <Page5 />
+        </div>
+        <div id="features">
+          <Page6 />
+        </div>
+        <div id="benefits">
+          <Page7 />
+        </div>
         <Page8 />
         <Page9 />
         <Page10 />

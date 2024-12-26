@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import styles from '../../styles/components/layout/Header.module.css'
 import NavMenu from './NavMenu'
 import Link from 'next/link'
+import DynamicNavMenu from './DynamicNavMenu'
 
 const Header: React.FC = () => {
   const [scrolled, setScrolled] = useState(false)
@@ -30,7 +31,8 @@ const Header: React.FC = () => {
           <h1 className={styles.logoText}>usefunnel</h1>
         </a>
 
-        <NavMenu />
+        {/* <NavMenu /> */}
+        <DynamicNavMenu />
 
         <li>
           <Link href="/medical-marketing" className="nav-link">
