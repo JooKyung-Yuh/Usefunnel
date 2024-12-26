@@ -3,8 +3,10 @@ import styles from '../../styles/components/layout/Header.module.css'
 import NavMenu from './NavMenu'
 import Link from 'next/link'
 import DynamicNavMenu from './DynamicNavMenu'
+import { useRouter } from 'next/router'
 
 const Header: React.FC = () => {
+  const router = useRouter()
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
@@ -33,15 +35,17 @@ const Header: React.FC = () => {
 
         <DynamicNavMenu />
 
-        <nav className="navbar">
-          <ul className="navbar-nav">
-            <li className="nav-item">
-              <Link href="/medical-marketing">
-                <a className="nav-link">의료 마케팅</a>
-              </Link>
-            </li>
-          </ul>
-        </nav>
+        {router.pathname !== '/medical-marketing' && (
+          <nav className="navbar">
+            <ul className="navbar-nav">
+              <li className="nav-item">
+                <Link href="/medical-marketing">
+                  <a className="nav-link">의료 마케팅</a>
+                </Link>
+              </li>
+            </ul>
+          </nav>
+        )}
 
         <a className={styles.btnGetstarted} href="#about">
           Get Started
