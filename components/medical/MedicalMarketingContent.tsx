@@ -4,7 +4,7 @@ import styles from '../../styles/components/medical/MedicalMarketing.module.css'
 const MedicalMarketingContent = () => {
   return (
     <div className={styles.medicalMarketing}>
-      <section className={styles.hero}>
+      <section id="hero" className={styles.hero}>
         <div className={styles.heroOverlay} />
         <div className="container">
           <h1 data-aos="fade-up">해외 신규 환자를 확보하고 계십니까?</h1>
@@ -14,7 +14,7 @@ const MedicalMarketingContent = () => {
         </div>
       </section>
 
-      <section className={styles.problems}>
+      <section id="problems" className={styles.problems}>
         <div className="container">
           <h2 data-aos="fade-up">
             해외 신규 환자, 언제까지 손 놓고 계실 겁니까?
@@ -53,7 +53,7 @@ const MedicalMarketingContent = () => {
         </div>
       </section>
 
-      <section className={styles.solution}>
+      <section id="solution" className={styles.solution}>
         <div className="container">
           <h2 data-aos="fade-up">유즈퍼널의 글로벌 마케팅 솔루션</h2>
           <div className={styles.solutionGrid}>
@@ -77,7 +77,7 @@ const MedicalMarketingContent = () => {
         </div>
       </section>
 
-      <section className={styles.cta}>
+      <section id="cta" className={styles.cta}>
         <div className="container text-center">
           <h2 data-aos="fade-up">이제는 변화를 선택할 때입니다</h2>
           <p data-aos="fade-up" data-aos-delay="100">
