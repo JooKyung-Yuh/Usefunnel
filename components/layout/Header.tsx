@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import styles from '../../styles/components/layout/Header.module.css'
 import NavMenu from './NavMenu'
+import Link from 'next/link'
 
 const Header: React.FC = () => {
   const [scrolled, setScrolled] = useState(false)
@@ -30,6 +31,12 @@ const Header: React.FC = () => {
         </a>
 
         <NavMenu />
+
+        <li>
+          <Link href="/medical-marketing" className="nav-link">
+            의료 마케팅
+          </Link>
+        </li>
 
         <a className={styles.btnGetstarted} href="#about">
           Get Started

@@ -24,18 +24,18 @@ const ServicesBenefits = () => {
               data-aos-delay="200"
             >
               <h2 className={styles.title}>
-                경쟁자를 압도하고, 브랜드 가치를 끌어올리세요.
+                중국 시장 진출의 새로운 기준을 만듭니다
               </h2>
               <p className={styles.description}>
-                감성을 자극하는 연결, 트위터에서 시작됩니다. 광고로 세상과
-                소통하는 새로운 방식을 경험하세요.
+                유즈퍼널과 함께라면, 복잡한 중국 시장도 명확한 기회가 됩니다.
+                실질적인 성과를 만드는 전략적 파트너가 되어드리겠습니다.
               </p>
-              <div className={styles.featureList}>
-                {/* ... feature list items ... */}
-              </div>
               <div className={styles.btnWrapper}>
-                <a href="/services/ServicesDetailPage" className={styles.btnPrimary}>
-                  More About Us
+                <a
+                  href="/services/ServicesDetailPage"
+                  className={styles.btnPrimary}
+                >
+                  자세히 알아보기
                 </a>
               </div>
             </div>

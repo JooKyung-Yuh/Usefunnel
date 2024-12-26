@@ -1,0 +1,67 @@
+.medicalMarketing {
+  padding-top: 80px;
+}
+
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('/assets/img/medical-marketing-bg.jpg') center/cover;
+  padding: 120px 0;
+  color: white;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.problems,
+.solution {
+  padding: 80px 0;
+}
+
+.problemList p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.solutionGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.solutionItem {
+  padding: 2rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.solutionItem:hover {
+  transform: translateY(-5px);
+}
+
+.cta {
+  background: #f8f9fa;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.ctaButton {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: #007bff;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 2rem;
+  transition: background 0.3s ease;
+}
+
+.ctaButton:hover {
+  background: #0056b3;
+}
