@@ -8,7 +8,12 @@ const Page9 = () => {
         <p className={styles.smallText}>
           피드엑스는 혁신적인 마케팅 솔루션을 제공하는 리더입니다.
         </p>
-        <p className={styles.grayText} data-aos="fade-up">
+        <p
+          className={styles.grayText}
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-offset="200"
+        >
           1,000건 이상의 경험과 탑브랜드들과 협력해온 피드엑스는
         </p>
         <p className={styles.whiteText} data-aos="fade-up" data-aos-delay="100">

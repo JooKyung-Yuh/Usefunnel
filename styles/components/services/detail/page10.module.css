@@ -93,18 +93,16 @@
 }
 
 @media (max-width: 991px) {
-  .title {
-    font-size: 3.5rem;
+  .content {
+    width: 100%;
+    padding: 0 24px;
   }
-  .subtitle {
-    font-size: 1.8rem;
+  .title {
+    font-size: 3rem;
   }
   .cardContainer {
     grid-template-columns: 1fr;
-  }
-  .content {
-    width: 90%;
-    margin-left: 2rem;
+    gap: 24px;
   }
 }
 

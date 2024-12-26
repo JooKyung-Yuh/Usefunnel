@@ -67,20 +67,18 @@
 }
 
 .btnPrimary {
-  background-color: var(--accent-color);
-  border-color: var(--accent-color);
-  color: var(--contrast-color);
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
+  background: var(--accent-color);
+  padding: 16px 32px;
+  border-radius: 30px;
+  font-size: 16px;
   font-weight: 600;
+  letter-spacing: 0.5px;
   transition: all 0.3s ease;
-  text-decoration: none;
-  border-radius: 50px;
 }
 
 .btnPrimary:hover {
-  background-color: color-mix(in srgb, var(--accent-color), black 10%);
-  border-color: color-mix(in srgb, var(--accent-color), black 10%);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(234, 83, 55, 0.2);
 }
 
 .imageGrid {

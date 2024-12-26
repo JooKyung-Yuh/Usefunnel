@@ -1,30 +1,86 @@
 .medicalMarketing {
-  padding-top: 80px;
+  color: #fff;
 }
 
 .hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url('/assets/img/medical-marketing-bg.jpg') center/cover;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: url('/assets/img/medical-hero-bg.jpg') center/cover;
   padding: 120px 0;
-  color: white;
-  text-align: center;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+}
+
+.hero h1,
+.hero p {
+  position: relative;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  z-index: 3;
 }
 
 .hero h1 {
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: 700;
   margin-bottom: 2rem;
+  line-height: 1.2;
 }
 
-.problems,
+.hero p {
+  font-size: 1.5rem;
+  opacity: 1;
+  font-weight: 500;
+}
+
+.problems {
+  background: #000;
+  padding: 120px 0;
+}
+
+.problemGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.problemCard {
+  background: linear-gradient(145deg, #151515, #101010);
+  padding: 2rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.problemCard:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent-color);
+}
+
+.cardIcon {
+  width: 40px;
+  height: 40px;
+  background: var(--accent-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
 .solution {
-  padding: 80px 0;
-}
-
-.problemList p {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-  line-height: 1.6;
+  background: #111;
+  padding: 120px 0;
 }
 
 .solutionGrid {
@@ -34,34 +90,58 @@
   margin-top: 3rem;
 }
 
-.solutionItem {
-  padding: 2rem;
-  background: #f8f9fa;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
+.solutionCard {
+  background: #000;
+  padding: 2.5rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
 }
 
-.solutionItem:hover {
+.solutionCard:hover {
   transform: translateY(-5px);
+  border-color: var(--accent-color);
+}
+
+.solutionCard h3 {
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
 }
 
 .cta {
-  background: #f8f9fa;
-  padding: 100px 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url('/assets/img/medical-cta-bg.jpg') center/cover;
+  padding: 120px 0;
   text-align: center;
 }
 
 .ctaButton {
   display: inline-block;
-  padding: 1rem 2rem;
-  background: #007bff;
-  color: white;
-  border-radius: 5px;
+  padding: 1rem 2.5rem;
+  background: var(--accent-color);
+  color: #fff;
   text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
   margin-top: 2rem;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .ctaButton:hover {
-  background: #0056b3;
+  background: color-mix(in srgb, var(--accent-color), black 10%);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  .hero p {
+    font-size: 1.2rem;
+  }
+  .problemGrid,
+  .solutionGrid {
+    grid-template-columns: 1fr;
+  }
 }
