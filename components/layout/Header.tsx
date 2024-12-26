@@ -31,14 +31,17 @@ const Header: React.FC = () => {
           <h1 className={styles.logoText}>usefunnel</h1>
         </a>
 
-        {/* <NavMenu /> */}
         <DynamicNavMenu />
 
-        <li>
-          <Link href="/medical-marketing">
-            <a className="nav-link">의료 마케팅</a>
-          </Link>
-        </li>
+        <nav className="navbar">
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <Link href="/medical-marketing">
+                <a className="nav-link">의료 마케팅</a>
+              </Link>
+            </li>
+          </ul>
+        </nav>
 
         <a className={styles.btnGetstarted} href="#about">
           Get Started
